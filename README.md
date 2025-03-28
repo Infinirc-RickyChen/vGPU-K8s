@@ -1,4 +1,4 @@
-# 在 RKE2 Ubuntu 上配置 Tesla T4 vGPU 的完整步驟
+# 在 RKE2 Ubuntu 上配置 Tesla T4 vGPU 
 
 以下是在 RKE2 Ubuntu 環境中設置 Tesla T4 vGPU 的完整配置過程。此步驟經過實際驗證，可以成功讓您的 Kubernetes 集群使用 vGPU 功能。
 
@@ -271,4 +271,4 @@ EOF
 helm upgrade vgpu vgpu-charts/vgpu -f vgpu-advanced.yaml -n kube-system
 ```
 
-這樣，您就完成了在 RKE2 Ubuntu 環境中使用 Tesla T4 GPU 設置 vGPU 的全部步驟。現在您可以創建利用 vGPU 的工作負載，高效地共享您的 Tesla T4 資源。
+
