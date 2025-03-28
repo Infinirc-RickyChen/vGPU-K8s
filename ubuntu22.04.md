@@ -28,3 +28,9 @@ spec:
     operator: "Exists"
     effect: "NoSchedule"
 EOF
+
+kubectl exec -it cuda-dev-4gb -- bash
+
+
+apt-get update
+apt-get install -y wget curl vim nano git sudo build-essential cmake python3 python3-pip
