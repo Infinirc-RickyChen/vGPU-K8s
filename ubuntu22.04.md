@@ -23,7 +23,7 @@ metadata:
 spec:
   containers:
   - name: dev-container
-    image: infinirc/cuda-ubuntu24-complete:latest
+    image: registry.infinirc.com/ubuntu-k8s/cuda-ubuntu24-complete:latest
     command: ["sleep", "infinity"]
     resources:
       limits:
@@ -40,6 +40,7 @@ spec:
     operator: "Exists"
     effect: "NoSchedule"
 EOF
+
 ```
 
 
