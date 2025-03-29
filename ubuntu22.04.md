@@ -9,6 +9,9 @@ docker tag cuda-ubuntu24-complete:latest infinirc/cuda-ubuntu24-complete:latest
 docker login
 docker push infinirc/cuda-ubuntu24-complete:latest
 
+docker tag cuda-ubuntu24-complete:latest registry.infinirc.com/ubuntu-k8s/cuda-ubuntu24-complete:latest
+
+docker push registry.infinirc.com/ubuntu-k8s/cuda-ubuntu24-complete:latest
 
 ```
 kubectl apply -f - <<EOF
