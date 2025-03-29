@@ -18,23 +18,16 @@ kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Pod
 metadata:
-  name: cuda-dev-4gb
+  name: cuda-test
   namespace: default
 spec:
   containers:
-  - name: dev-container
+  - name: cuda
     image: registry.infinirc.com/ubuntu-k8s/cuda-ubuntu24-complete:latest
-    command: ["sleep", "infinity"]
+    command: ["nvidia-smi"]
     resources:
       limits:
         nvidia.com/gpu: 1
-        nvidia.com/gpumem: 4000
-        nvidia.com/gpucores: 30
-    env:
-    - name: NVIDIA_VISIBLE_DEVICES
-      value: "all"
-    - name: NVIDIA_DRIVER_CAPABILITIES
-      value: "all"
   tolerations:
   - key: "node-role.kubernetes.io/control-plane"
     operator: "Exists"
