@@ -1,3 +1,9 @@
+# docker 
+docker build -t cuda-ubuntu24-base:latest .
+
+運行
+docker run --gpus all -it --name cuda-dev-container cuda-ubuntu24-base
+
 # 刪除
 kubectl delete pod cuda-dev-4gb
 
