@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     libncurses5-dev \
     libncursesw5-dev \
     gnupg \
+    tmux\
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -28,7 +29,6 @@ RUN ln -s /lib/x86_64-linux-gnu/libncurses.so.6 /lib/x86_64-linux-gnu/libtinfo.s
 RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb && \
     dpkg -i cuda-keyring_1.1-1_all.deb && \
     apt-get update
-
 
 
 RUN apt-get install -y --no-install-recommends \
